@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>PetFax</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
             {% for pet in pets %}
                 <div class="pet">
                     <H2>{{ pet.pet_name }}</H2>
-                    <img src="{{ url_for('static', filename='assets/') }}{{pet.pet_photo}}"/>
+                    <img src="{{pet.pet_photo}}"/>
                     <a href="/pets/{{ pet.pet_id }}">Learn more ⟩</a>
                 </div>
             {% endfor %}
